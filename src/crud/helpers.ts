@@ -44,7 +44,7 @@ export function plainToPrismaNestedQuery(
                 // When a nested relation is provided but not allowed, persist it as JSON
                 // instead of throwing an error. This stores the nested object as a
                 // JSON string on the parent key so it can be saved in a JSON column.
-                parent[key] = JSON.stringify(value);
+                parent[key] = value;
                 return;
             }
 
