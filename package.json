@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0-beta.18",
+    "version": "1.0.0-beta.20",
     "description": "CRUD package for NestJS and Prisma ORM",
     "homepage": "https://kepelrs.github.io/nestjs-prisma-crud",
     "license": "MIT",
@@ -36,8 +36,8 @@
         "tabWidth": 4,
         "arrowParens": "always"
     },
-    "name": "nestjs-prisma-crud",
-    "author": "Kepelrs",
+    "name": "@yohannes_abera/nestjs-prisma-crud",
+    "author": "Yohannes Abera",
     "module": "dist/nestjs-prisma-crud.esm.js",
     "devDependencies": {
         "@nestjs/common": "10.4.22",
@@ -51,9 +51,9 @@
         "typescript": "5.9.3"
     },
     "peerDependencies": {
-        "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
-        "@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0",
-        "@prisma/client": "^3.0.2 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+        "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+        "@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+        "@prisma/client": "^3.0.2 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
         "rxjs": "^7.3.0"
     },
     "dependencies": {

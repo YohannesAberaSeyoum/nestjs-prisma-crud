@@ -1,4 +1,4 @@
-import { BadRequestException } from '@nestjs/common';
+// import { BadRequestException } from '@nestjs/common';
 import { traverse } from 'object-traversal';
 import { getNestedProperty } from './utils';
 
@@ -41,9 +41,11 @@ export function plainToPrismaNestedQuery(
             key = key!;
 
             if (!pathIsWithinAllowedJoins) {
-                throw new BadRequestException(
-                    `Provided nested relation is not allowed: ${pathWithoutDigits}`,
-                );
+                // When a nested relation is provided but not allowed, persist it as JSON
+                // instead of throwing an error. This stores the nested object as a
+                // JSON string on the parent key so it can be saved in a JSON column.
+                parent[key] = JSON.stringify(value);
+                return;
             }
 
             if (valueIsArray) {
